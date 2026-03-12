@@ -1,40 +1,258 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<title>Terms of Service</title>
+<meta charset="UTF-8">
+<title>Términos de uso</title>
+
 <style>
+
 body{
-font-family: Arial;
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
 background:#0f1115;
 color:white;
-padding:40px;
-max-width:900px;
-margin:auto;
+display:flex;
+height:100vh;
 }
-h1{color:#5865F2;}
+
+.sidebar{
+width:260px;
+background:#181b20;
+padding:20px;
+box-shadow:2px 0 10px rgba(0,0,0,0.5);
+}
+
+.sidebar h2{
+color:#5865F2;
+margin-bottom:20px;
+}
+
+.button{
+display:block;
+width:100%;
+padding:12px;
+margin-bottom:10px;
+border:none;
+background:#23272f;
+color:white;
+cursor:pointer;
+border-radius:6px;
+transition:0.2s;
+font-size:14px;
+}
+
+.button:hover{
+background:#5865F2;
+transform:scale(1.03);
+}
+
+.content{
+flex:1;
+padding:40px;
+overflow-y:auto;
+}
+
+.section{
+display:none;
+animation:fade 0.4s;
+}
+
+.active{
+display:block;
+}
+
+h1{
+color:#5865F2;
+}
+
+@keyframes fade{
+from{opacity:0; transform:translateY(10px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+.card{
+background:#181b20;
+padding:20px;
+border-radius:8px;
+margin-bottom:20px;
+box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
 </style>
 </head>
 
 <body>
 
-<h1>Terms of Service</h1>
+<div class="sidebar">
 
-<p>Last updated: 2026</p>
+<h2>BOT INFO</h2>
 
-<h2>1. Use of the Bot</h2>
-<p>This bot is designed to manage and improve Discord servers.</p>
+<button class="button" onclick="showSection('terminos')">Términos de Servicio</button>
+<button class="button" onclick="showSection('aclaraciones')">Aclaraciones</button>
+<button class="button" onclick="showSection('servidores')">Servidores</button>
+<button class="button" onclick="showSection('guia')">Cosas a saber para usar</button>
 
-<h2>2. Data</h2>
-<p>The bot may store server IDs and user IDs required for functionality.</p>
+</div>
 
-<h2>3. Misuse</h2>
-<p>Users may not abuse or exploit the bot.</p>
+<div class="content">
 
-<h2>4. Changes</h2>
-<p>These terms may change at any time.</p>
+<div id="terminos" class="section active">
 
-<h2>5. Contact</h2>
-<p>Contact: Your Discord</p>
+<h1>Términos de Uso del Bot</h1>
+
+<div class="card">
+
+<h3>1. Aceptación de los Términos</h3>
+<p>Al utilizar este bot dentro de cualquier servidor de Discord, el usuario acepta cumplir con los presentes Términos de Uso.</p>
+
+<h3>2. Uso del Bot</h3>
+<p>El bot está diseñado para proporcionar funciones de utilidad, administración, entretenimiento, economía virtual, automatización o roleplay dentro de servidores de Discord.</p>
+
+<h3>3. Cumplimiento con Discord</h3>
+<p>El uso del bot debe respetar en todo momento los términos y normas de Discord.</p>
+
+<h3>4. Uso Adecuado</h3>
+<ul>
+<li>No spam de comandos</li>
+<li>No abusar del sistema</li>
+<li>No realizar ataques o pruebas de estrés</li>
+<li>No automatizar carga excesiva</li>
+<li>No usar el bot para acoso</li>
+</ul>
+
+<h3>5. Abuso de Comandos</h3>
+<p>El uso excesivo de comandos puede resultar en restricciones automáticas.</p>
+
+<h3>6. Moderación</h3>
+<p>Los administradores del servidor pueden restringir el uso del bot.</p>
+
+<h3>7. Sistema de Datos</h3>
+<ul>
+<li>ID de usuario</li>
+<li>ID de servidor</li>
+<li>Configuraciones</li>
+<li>Datos de economía</li>
+<li>Historial de comandos</li>
+</ul>
+
+<h3>8. Privacidad</h3>
+<p>No se recopilan datos personales fuera de la información necesaria de Discord.</p>
+
+<h3>9. Disponibilidad</h3>
+<p>No se garantiza disponibilidad continua del bot.</p>
+
+<h3>10. Cambios en el Bot</h3>
+<p>El desarrollador puede modificar el bot en cualquier momento.</p>
+
+<h3>11. Responsabilidad</h3>
+<ul>
+<li>Mal uso del bot</li>
+<li>Pérdida de economía virtual</li>
+<li>Errores de configuración</li>
+<li>Decisiones de administradores</li>
+</ul>
+
+<h3>12. Seguridad</h3>
+<p>Intentar explotar vulnerabilidades constituye una violación grave.</p>
+
+<h3>13. Restricción de Acceso</h3>
+<p>El bot puede bloquear usuarios o servidores abusivos.</p>
+
+<h3>14. Eliminación de Datos</h3>
+<p>Administradores pueden solicitar eliminación de datos.</p>
+
+<h3>15. Suspensión</h3>
+<p>El desarrollador puede suspender el bot temporal o permanentemente.</p>
+
+<h3>16. Uso en Múltiples Servidores</h3>
+<p>Estos términos aplican a todos los servidores donde esté el bot.</p>
+
+<h3>17. Modificaciones</h3>
+<p>Los términos pueden cambiar en cualquier momento.</p>
+
+<h3>18. Contacto</h3>
+<p>Contactar al desarrollador para errores o abuso.</p>
+
+<h3>19. Terminación</h3>
+<p>El acceso puede ser revocado si se violan los términos.</p>
+
+<h3>20. Aceptación Final</h3>
+<p>Al usar el bot se aceptan estos términos.</p>
+
+</div>
+
+</div>
+
+
+<div id="aclaraciones" class="section">
+
+<h1>Aclaraciones</h1>
+
+<div class="card">
+
+<p>Este bot es una herramienta diseñada para ayudar en la administración y funcionamiento de servidores de Discord.</p>
+
+<p>Las funciones del bot pueden cambiar, mejorar o eliminarse dependiendo del desarrollo del proyecto.</p>
+
+<p>El uso del bot siempre está sujeto a las reglas del servidor donde se utilice.</p>
+
+</div>
+
+</div>
+
+
+<div id="servidores" class="section">
+
+<h1>Servidores</h1>
+
+<div class="card">
+
+<p>El bot puede ser utilizado en múltiples servidores simultáneamente.</p>
+
+<p>Cada servidor mantiene sus propias configuraciones y administración.</p>
+
+<p>Los administradores de cada servidor son responsables del uso que los usuarios hagan del bot.</p>
+
+</div>
+
+</div>
+
+
+<div id="guia" class="section">
+
+<h1>Cosas a saber para usar el bot</h1>
+
+<div class="card">
+
+<ul>
+<li>No spamear comandos</li>
+<li>Leer la ayuda del bot</li>
+<li>Respetar reglas del servidor</li>
+<li>Reportar errores al desarrollador</li>
+<li>No intentar explotar bugs</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function showSection(id){
+
+let sections = document.querySelectorAll(".section");
+
+sections.forEach(section=>{
+section.classList.remove("active");
+});
+
+document.getElementById(id).classList.add("active");
+
+}
+
+</script>
 
 </body>
 </html>
